@@ -124,7 +124,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 2em;
+     margin: 1.5em 3em;
   }
   #card #card-content #card-stats p:nth-child(even) {
     margin: .7em 0;
