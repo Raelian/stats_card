@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* Primary colors */
+$dark-blue: hsl(233, 47%, 7%);
+$saturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+/* Neutral colors */
+$heading-white: hsl(0, 0%, 100%);
+$text-white: hsla(0, 0%, 100%, 0.75);
+$stat-white: hsla(0, 0%, 100%, 0.6);
+/* Font family */
+$inter: 'Inter', sans-serif;
+$lexend-deca: 'Lexend Deca', sans-serif;
+
+:root {
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#card {
+    background-color: $saturated-blue;
+    width: 85%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    #card-img {
+        background-color: $soft-violet;
+
+        img {
+            display: block;
+            width: 100%;
+            mix-blend-mode: multiply;
+            opacity: 0.8;
+        }
+    }
+
+    #card-content {
+        text-align: center;
+
+
+        #card-header {
+            font-family: $inter;
+            font-weight: bold;
+            font-size: 1.9em;
+            margin: 1.2em .9em 0;
+
+            span {
+                color: $soft-violet;
+            }
+        }
+
+        #card-text {
+            font-family: $lexend-deca;
+            color: $text-white;
+            margin: 1.5em 1.8em 0;
+            line-height: 1.7em;
+        }
+
+        .stats-box {
+            margin: 2.2em;
+            font-family: $inter;
+
+            p:nth-child(odd) {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            p:nth-child(even) {
+                color: $stat-white;
+                font-size: .8em;
+                margin: .5em;
+                letter-spacing: .2em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+   
+    #card {
+        height: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+    
+        #card-img {
+            width: 50%;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        #card-content {
+            width: 50%;
+            text-align: left;
+
+            #card-header {
+                font-size: 2.5em;
+                margin: 2em 2em 0;
+            }
+
+            #card-text {
+                margin: 2em 9em 0 5em;
+                font-weight: initial;
+            }
+
+            #card-stats {
+                display: flex;
+                flex-direction: row;
+                margin: 3em;
+
+                p:nth-child(even) {
+                    margin: .7em 0;
+                }
+            }
+        }
+    }
+}
